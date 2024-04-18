@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+h1 {
+    font-size: 100px;
+    position: relative;
+    top: 15%;
+    font-family: "Kode Mono", monospace;
+}
+
+.container {
+    width: 50%;
+}
+.titleCar {
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+    height: 50px;
+    text-align: center;
+}
+
+.titleCar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 10%;
+  background: red;
+}
+
+.descriptionCar {
+  position: relative;
+  text-align: center;
+  top: 15%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+  height: 20px;
+}
+
+.scroll-transition {
+    font-size: 50px;
+    position: relative;
+    top: 15%;
+    font-family: "Kode Mono", monospace;
+    opacity: 0;
+    transform: translateX(-150%);
+    animation: enterFromLeft 1s forwards;
+    animation: removeFromRight 5s forwards;
+}
+
+.description {
+    position: absolute;
+    top: 20%;
+    color: gray;
+    font-size: 20px;
+    text-align: center;   
+}
+
+@keyframes enterFromLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+@keyframes removeFromRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+#start {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+}
+
+.start {
+    background-image: url(../images/lambo1.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-color: #F5F5F5;
+}
+
+.firstCar {
+    background-color: #F5F5F5;
+    background-image: url(../images/Lamborghini_350_GTV.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.sidebar.hide {
+  display: none;
+}
+.secondCar {
+    background-color: #F5F5F5;
+    background-image: url(../images/lambo\ 1970.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.thirdCar {
+    background-color: #F5F5F5;
+    background-image: url(../images/1980.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.fourthCar {
+    background-color: #F5F5F5;
+    background-image: url(../images/1990.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.fifthCar {
+  background-color: #F5F5F5;
+  background-image: url(../images/2000.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.sixCar {
+  background-color: #F5F5F5;
+  background-image: url(../images/2010.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.sevenCar {
+  background-color: #F5F5F5;
+  background-image: url(../images/blå\ lambo.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.sidebar {
+    height: auto;
+    width: auto;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1%;
+    background: rgba(51, 51, 51, 0.5); 
+    backdrop-filter: blur(5px);    overflow-x: hidden;
+  }
+
+  .sidebar a {
+    margin: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 21px;
+    color: white;
+    display: block;
+    text-align: center;
+  }
+
+  .sidebar a:hover {
+    color: black;
+  }
+  .sidebar a:not(:last-child) {
+    border-bottom: 2px solid gray;
+}
+  .sidebar a:not(:last-child):hover {
+    border-bottom: 2px solid black;
+}
